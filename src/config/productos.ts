@@ -35,6 +35,8 @@ export interface Producto {
 export const sitioPrincipal = {
   nombre: "UNEX Education",
   url: "/",
+  /** Dirección pública del sitio, para los enlaces que se comparten. Cambiará a unexeducation.co. */
+  urlPublica: "https://unexeducation.vercel.app",
 };
 
 export const productos: Producto[] = [

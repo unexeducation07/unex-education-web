@@ -67,6 +67,8 @@
 .descripcion {
   margin-bottom: 0.75rem;
   color: var(--muted);
+  font-size: 0.9375rem; /* 15 px: el nombre destaca sobre la descripción */
+  line-height: 1.5;
 }
 
 .etiquetas {

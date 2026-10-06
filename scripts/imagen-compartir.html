@@ -1,0 +1,84 @@
+<!doctype html>
+<!--
+  Fuente de la imagen para compartir el enlace (1200 × 630): public/compartir.png
+  Para regenerarla, desde la carpeta del proyecto:
+    npm run imagen-compartir
+-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../docs/marca/tokens.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&family=Unbounded:wght@600&display=block"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        background:
+          radial-gradient(
+            ellipse 55% 60% at 50% 45%,
+            color-mix(in srgb, var(--unex-indigo) 18%, transparent),
+            transparent 70%
+          ),
+          var(--unex-cosmos);
+        color: var(--unex-polvo);
+        text-align: center;
+      }
+      img {
+        width: 620px;
+        height: auto;
+      }
+      h1 {
+        margin: 0;
+        font-family: "Unbounded", sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+      ul {
+        display: flex;
+        gap: 36px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: "Lexend", sans-serif;
+        font-size: 22px;
+        color: color-mix(in srgb, var(--unex-polvo) 80%, transparent);
+      }
+      li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      li::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--c);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="../public/brand/unex-logo-horizontal-negativo.svg" alt="" />
+    <h1>Donde los mundos del aprendizaje se cruzan.</h1>
+    <ul>
+      <li style="--c: var(--unex-aurora)">Academy</li>
+      <li style="--c: var(--unex-indigo)">Gestión</li>
+      <li style="--c: var(--unex-nebulosa)">Evaluación</li>
+      <li style="--c: var(--unex-plasma)">Apps</li>
+    </ul>
+  </body>
+</html>

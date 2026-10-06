@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
 import Encabezado from "@/components/encabezado/Encabezado";
+import { openGraphComun } from "@/config/metadatos";
 import CatalogoApps from "@/components/apps/CatalogoApps";
 import { apps } from "@/data/apps";
 import styles from "./apps.module.css";
 
+const descripcion = "Pequeñas herramientas listas para usar en clase y en casa.";
+
 export const metadata: Metadata = {
-  title: "UNEX Apps · UNEX Education",
-  description: "Pequeñas herramientas listas para usar en clase y en casa.",
+  title: "UNEX Apps",
+  description: descripcion,
+  openGraph: {
+    ...openGraphComun,
+    title: "UNEX Apps · UNEX Education",
+    description: descripcion,
+    url: "/apps",
+  },
 };
 
 export default function Apps() {

@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Lexend, Unbounded } from "next/font/google";
 import "../../docs/marca/tokens.css";
 import "./globals.css";
 import PiePagina from "@/components/PiePagina";
+import { openGraphComun } from "@/config/metadatos";
+import { sitioPrincipal } from "@/config/productos";
 
 // Títulos: Unbounded con los tres pesos del manual.
 const unbounded = Unbounded({
@@ -19,12 +21,33 @@ const lexend = Lexend({
   display: "swap",
 });
 
+const descripcion =
+  "Donde los mundos del aprendizaje se cruzan. Cursos que se aprenden como una aventura, gestión escolar, evaluaciones y herramientas para el aula.";
+
 export const metadata: Metadata = {
-  title: "UNEX Education",
-  description: "Donde los mundos del aprendizaje se cruzan.",
+  metadataBase: new URL(sitioPrincipal.urlPublica),
+  title: {
+    default: sitioPrincipal.nombre,
+    template: `%s · ${sitioPrincipal.nombre}`,
+  },
+  description: descripcion,
+  openGraph: {
+    ...openGraphComun,
+    title: sitioPrincipal.nombre,
+    url: "/",
+    description: descripcion,
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   icons: {
     icon: { url: "/brand/unex-favicon.svg", type: "image/svg+xml" },
   },
+};
+
+// Color de la barra del navegador en móviles: Cosmos (--unex-cosmos).
+export const viewport: Viewport = {
+  themeColor: "#15173F",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
