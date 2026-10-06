@@ -46,7 +46,7 @@ export const productos: Producto[] = [
     nombreCorto: "Academy",
     para: "Estudiantes",
     frase: "Cursos cortos que se viven como una historia: cada tema es un universo con misiones y logros.",
-    url: null,
+    url: "https://unex-academia.vercel.app",
     colores: {
       base: "var(--unex-aurora)",
       oscuro: "var(--unex-aurora-oscuro)",
