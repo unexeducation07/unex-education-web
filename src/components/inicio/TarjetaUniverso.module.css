@@ -1,0 +1,88 @@
+/* Tarjeta de un universo. Los colores llegan como variables desde productos.ts:
+   --universo (gráficos), --universo-oscuro (botón) y --universo-texto (texto). */
+
+.tarjeta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 2rem 1.5rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+/* Franja superior con el color base del universo. */
+.tarjeta::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 6px;
+  background: var(--universo);
+}
+
+.tarjeta:hover {
+  border-color: var(--universo);
+  transform: translateY(-2px);
+}
+
+.titulo {
+  margin-bottom: 1.25rem;
+}
+
+.titulo img {
+  width: 200px;
+}
+
+.para {
+  margin-bottom: 0.5rem;
+  color: var(--universo-texto);
+  font-weight: 500;
+}
+
+.etiqueta {
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.frase {
+  color: var(--muted);
+}
+
+.accion {
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.boton,
+.proximamente {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.boton {
+  background: var(--universo-oscuro);
+  color: var(--unex-polvo);
+  text-decoration: none;
+}
+
+.boton span {
+  transition: transform 0.15s;
+}
+
+.boton:hover span {
+  transform: translateX(3px);
+}
+
+.proximamente {
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  cursor: default;
+}

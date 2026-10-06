@@ -1,0 +1,46 @@
+import type { CSSProperties } from "react";
+import type { Producto } from "@/config/productos";
+import styles from "./TarjetaUniverso.module.css";
+
+export default function TarjetaUniverso({ producto }: { producto: Producto }) {
+  const colores = {
+    "--universo": producto.colores.base,
+    "--universo-oscuro": producto.colores.oscuro,
+    "--universo-texto": `var(--${producto.id}-texto)`,
+  } as CSSProperties;
+
+  return (
+    <article className={styles.tarjeta} style={colores}>
+      <h3 className={styles.titulo}>
+        <picture>
+          <source
+            srcSet={`/brand/submarcas/unex-${producto.id}-negativo.svg`}
+            media="(prefers-color-scheme: dark)"
+          />
+          <img
+            src={`/brand/submarcas/unex-${producto.id}.svg`}
+            alt={producto.nombre}
+            width={200}
+            height={64}
+          />
+        </picture>
+      </h3>
+
+      <p className={styles.para}>
+        <span className={styles.etiqueta}>Para</span> {producto.para}
+      </p>
+      <p className={styles.frase}>{producto.frase}</p>
+
+      <div className={styles.accion}>
+        {producto.url ? (
+          <a href={producto.url} className={styles.boton}>
+            Entrar a {producto.nombre}
+            <span aria-hidden="true">→</span>
+          </a>
+        ) : (
+          <span className={styles.proximamente}>Próximamente</span>
+        )}
+      </div>
+    </article>
+  );
+}

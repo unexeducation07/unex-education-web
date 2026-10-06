@@ -1,0 +1,27 @@
+.intro {
+  max-width: 40rem;
+  margin-bottom: 2.5rem;
+}
+
+.intro p {
+  color: var(--muted);
+  font-size: 1.1875rem; /* 19 px */
+  font-weight: 300;
+}
+
+.rejilla {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .rejilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .rejilla {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
