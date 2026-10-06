@@ -1,0 +1,133 @@
+/* "Cómo se aprende en UNEX": banda de superficie para separarla de las tarjetas. */
+
+.banda {
+  border-block: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.intro {
+  max-width: 40rem;
+  margin-bottom: 2.5rem;
+}
+
+.intro p {
+  color: var(--muted);
+  font-size: 1.1875rem; /* 19 px */
+  font-weight: 300;
+}
+
+.pilares {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.pilar {
+  padding: 1.75rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--bg);
+}
+
+.etiqueta {
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.texto {
+  margin: 0;
+  color: var(--muted);
+}
+
+.subtitulo {
+  margin-bottom: 1.5rem;
+}
+
+.pasos {
+  display: grid;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.paso {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  align-items: start;
+  align-content: start;
+}
+
+.paso .texto {
+  grid-column: 2;
+}
+
+.numero {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--unex-cosmos);
+  color: var(--unex-polvo);
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+/* En modo oscuro el Cosmos se perdería con el fondo: se invierte. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .numero {
+    background: var(--unex-polvo);
+    color: var(--unex-cosmos);
+  }
+}
+
+:root[data-theme="dark"] .numero {
+  background: var(--unex-polvo);
+  color: var(--unex-cosmos);
+}
+
+/* El último paso son los logros: Nova, el color reservado para ellos. */
+.paso:last-child .numero {
+  background: var(--unex-nova);
+  color: var(--unex-cosmos);
+}
+
+.pasoTitulo {
+  margin: 0.375rem 0 0.25rem;
+  font-family: var(--font-text);
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+
+@media (min-width: 760px) {
+  .pilares {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .pasos {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .paso {
+    grid-template-columns: 1fr;
+  }
+
+  .paso .texto {
+    grid-column: auto;
+  }
+
+  .numero {
+    grid-row: auto;
+    margin-bottom: 0.75rem;
+  }
+}
