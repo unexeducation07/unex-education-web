@@ -47,21 +47,23 @@ Futuro: `academy.`, `gestion.`, `evaluacion.` y `apps.unexeducation.co`.
 
 ## Marca (obligatorio)
 Todo está en `docs/marca/`: manual completo, tokens CSS y 23 SVG del logo.
+- **Vocabulario:** *universo* se reserva para los mundos temáticos de los cursos de Academy
+  (aventura, magia, portales…). Academy, Gestión, Evaluación y Apps son *plataformas*.
 - **Nunca redibujes ni modifiques el logo.** Copia los SVG que necesites a `public/brand/` y úsalos
   con `<img>`. El logo animado (`unex-logo-animado-negativo.svg`) funciona dentro de `<img>`.
 - Favicon: `unex-favicon.svg`. Ícono de app: `unex-app-icon.svg`.
 - Colores: solo los tokens. Nova (dorado) es solo para la estrella y los logros, nunca texto
-  sobre fondo claro. Proporción aproximada: Polvo 60 %, Cosmos 25 %, color de universo 10 %, Nova 5 %.
+  sobre fondo claro. Proporción aproximada: Polvo 60 %, Cosmos 25 %, color de la plataforma 10 %, Nova 5 %.
 - Cada submarca tiene su color: Academy = Aurora, Gestión = Índigo, Evaluación = Nebulosa, Apps = Plasma.
 - Unbounded con moderación (títulos). Lexend para todo el texto.
 
 ## Páginas
 ### Inicio (`/`)
 1. **Portada** sobre fondo Cosmos: logo animado, la frase "Donde los mundos del aprendizaje se
-   cruzan." y un llamado a explorar los universos. No uses alto 100vh.
-2. **Los cuatro universos**: una tarjeta por producto con su color, para quién es, una frase y un
+   cruzan." y un botón "Explora UNEX" que baja a las plataformas. No uses alto 100vh.
+2. **Las plataformas UNEX**: una tarjeta por plataforma con su color, para quién es, una frase y un
    botón hacia su URL.
-3. **Cómo se aprende en UNEX**: storytelling y gamificación explicados en palabras simples.
+3. **Cómo se aprende en UNEX Academy**: storytelling y gamificación explicados en palabras simples.
 4. **Pie de página**: logo, enlaces a los productos y año.
 
 ### UNEX Apps (`/apps`)
@@ -71,11 +73,11 @@ Todo está en `docs/marca/`: manual completo, tokens CSS y 23 SVG del logo.
   `icono`, `estado` (disponible | proximamente), `externa` (boolean).
 - Las apps propias abren en la misma pestaña; las externas en una pestaña nueva.
 - Filtro simple por público. Las tarjetas "próximamente" se muestran pero no se pueden pulsar.
-- Lista de microapps: **PENDIENTE (pedir al usuario)**. Mientras tanto, usa 3 o 4 ejemplos
-  marcados claramente como ejemplo.
+- Microapps: aún no existen. El usuario pasará más adelante, por cada una, su ficha (nombre,
+  qué soluciona, para quién) y sus archivos HTML. Mientras tanto hay 4 ejemplos con `ejemplo: true`.
 
 ### Encabezado común
-Logo horizontal y un selector de universos (Academy, Gestión, Evaluación, Apps). Debe ser fácil de
+Logo horizontal y un selector de plataformas (Academy, Gestión, Evaluación, Apps). Debe ser fácil de
 copiar después a los otros tres proyectos.
 
 ## Calidad
