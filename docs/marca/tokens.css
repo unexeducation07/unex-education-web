@@ -1,0 +1,45 @@
+/* UNEX Education: tokens de marca (v2.1). Fuente de verdad: docs/marca/manual-identidad.md */
+:root {
+  /* Base */
+  --unex-cosmos: #15173F;
+  --unex-polvo: #F5F4FB;
+  --unex-nova: #F8B630;          /* solo estrella y logros; nunca texto sobre fondo claro */
+
+  /* Universos (submarcas) */
+  --unex-aurora: #1FBFA9;        /* Academy */
+  --unex-indigo: #5866F5;        /* Gestión */
+  --unex-nebulosa: #EC4A82;      /* Evaluación */
+  --unex-plasma: #A35CF0;        /* Apps */
+  /* Versiones claras para texto sobre Cosmos */
+  --unex-indigo-claro: #8E98FF;
+  --unex-nebulosa-clara: #F27BA3;
+  --unex-plasma-claro: #C597FF;
+  /* Tonos oscuros para texto y botones sobre fondo claro (contraste ≥ 5,2:1 sobre Polvo y blanco;
+     texto blanco encima ≥ 5,7:1). El color base de cada universo queda solo para elementos gráficos. */
+  --unex-aurora-oscuro: #137365;
+  --unex-indigo-oscuro: #4050F4;
+  --unex-nebulosa-oscuro: #C81553;
+  --unex-plasma-oscuro: #892EEC;
+
+  /* Interfaz: modo claro */
+  --bg: #F5F4FB;
+  --surface: #FFFFFF;
+  --ink: #15173F;
+  --muted: #585A7E;
+  --line: #DDDBEE;
+
+  /* Tipografía */
+  --font-display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --font-text: "Lexend", "Segoe UI", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D0F2B; --surface: #161941; --ink: #EEEDF9; --muted: #A3A5CB; --line: #2A2D5C;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0D0F2B; --surface: #161941; --ink: #EEEDF9; --muted: #A3A5CB; --line: #2A2D5C;
+  color-scheme: dark;
+}
