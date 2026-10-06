@@ -5,7 +5,7 @@
   --unex-polvo: #F5F4FB;
   --unex-nova: #F8B630;          /* solo estrella y logros; nunca texto sobre fondo claro */
 
-  /* Universos (submarcas) */
+  /* Plataformas (submarcas) */
   --unex-aurora: #1FBFA9;        /* Academy */
   --unex-indigo: #5866F5;        /* Gestión */
   --unex-nebulosa: #EC4A82;      /* Evaluación */
@@ -15,7 +15,7 @@
   --unex-nebulosa-clara: #F27BA3;
   --unex-plasma-claro: #C597FF;
   /* Tonos oscuros para texto y botones sobre fondo claro (contraste ≥ 5,2:1 sobre Polvo y blanco;
-     texto blanco encima ≥ 5,7:1). El color base de cada universo queda solo para elementos gráficos. */
+     texto blanco encima ≥ 5,7:1). El color base de cada plataforma queda solo para elementos gráficos. */
   --unex-aurora-oscuro: #137365;
   --unex-indigo-oscuro: #4050F4;
   --unex-nebulosa-oscuro: #C81553;

@@ -67,6 +67,10 @@ Todo el logo es geometría exacta. No depende de ninguna fuente instalada.
 - **Logo horizontal:** mínimo 160 px de ancho en pantalla, 40 mm impreso.
 - **Isotipo:** mínimo 24 px. Por debajo, usa el favicon.
 
+### Excepciones en documentos (constancias, diplomas, PDF)
+- **Marca de agua:** se permite el isotipo **monocromo** (versión aprobada) entre 4 % y 6 % de opacidad, como medida contra falsificaciones. No es una alteración del logo.
+- **Tamaño mínimo:** en un documento escalado en pantalla (por ejemplo, una constancia vista en el celular), el logo puede quedar por debajo de 160 px. Lo que cuenta es el tamaño impreso: mínimo 40 mm.
+
 ### Usos incorrectos
 - No estirar ni comprimir.
 - No cambiar los colores.
@@ -103,7 +107,7 @@ Un cielo nocturno con una sola fuente de luz.
 | **Polvo estelar** | `#F5F4FB` | 245, 244, 251 | Fondo claro. Reemplaza al blanco puro en superficies grandes |
 | **Nova** | `#F8B630` | 248, 182, 48 | Solo para la estrella y los logros. Si todo brilla, nada guía |
 
-### Universos (submarcas)
+### Colores de plataforma
 | Nombre | Hex | RGB |
 |---|---|---|
 | Aurora | `#1FBFA9` | 31, 191, 169 |
@@ -112,21 +116,21 @@ Un cielo nocturno con una sola fuente de luz.
 | Plasma | `#A35CF0` | 163, 92, 240 |
 
 ### Proporción en una pantalla típica
-Polvo estelar 60 %, Cosmos 25 %, color del universo 10 %, Nova 5 %.
+Polvo estelar 60 %, Cosmos 25 %, color de la plataforma 10 %, Nova 5 %.
 
 ### Reglas
 - Nova nunca va como texto sobre fondos claros (no alcanza contraste mínimo).
 - Para texto de submarca sobre Cosmos usa las versiones claras de la tabla de submarcas.
-- Los colores de estado (éxito, alerta, error) se definirán en la guía de componentes y no reutilizan los colores de universo.
+- Los colores de estado (éxito, alerta, error) se definirán en la guía de componentes y no reutilizan los colores de plataforma.
 
-### Color de universo en la interfaz (v2.1)
-El color base de cada universo **no alcanza contraste AA como texto** sobre fondo claro. Por eso:
+### Color de plataforma en la interfaz (v2.1)
+El color base de cada plataforma **no alcanza contraste AA como texto** sobre fondo claro. Por eso:
 
 - **Color base** (Aurora, Índigo, Nebulosa, Plasma): solo elementos gráficos, como franjas, puntos, íconos, ilustraciones y el logo de submarca.
-- **Texto y botones** sobre fondo claro: usa Cosmos, o el **tono oscuro** del universo.
-- **Texto** sobre fondo Cosmos: usa el **tono claro** del universo.
+- **Texto y botones** sobre fondo claro: usa Cosmos, o el **tono oscuro** de la plataforma.
+- **Texto** sobre fondo Cosmos: usa el **tono claro** de la plataforma.
 
-| Universo | Base (gráficos) | Tono oscuro (texto/botón en claro) | Tono claro (texto en Cosmos) |
+| Plataforma | Base (gráficos) | Tono oscuro (texto/botón en claro) | Tono claro (texto en Cosmos) |
 |---|---|---|---|
 | Aurora (Academy) | `#1FBFA9` | `#137365` (5,2:1) | `#1FBFA9` (7,4:1) |
 | Índigo (Gestión) | `#5866F5` | `#4050F4` (5,2:1) | `#8E98FF` (6,6:1) |
