@@ -1,12 +1,17 @@
 import Encabezado from "@/components/encabezado/Encabezado";
+import Portada from "@/components/inicio/Portada";
 
 export default function Inicio() {
   return (
     <>
       <Encabezado />
-      <main id="contenido" className="contenedor seccion">
-        <h1>UNEX Education</h1>
-        <p>Donde los mundos del aprendizaje se cruzan. Sitio en construcción.</p>
+      <main id="contenido">
+        <Portada />
+        {/* Provisional: la sección de universos se construye en el paso 5. */}
+        <section id="universos" className="contenedor seccion">
+          <h2>Los universos UNEX</h2>
+          <p>Muy pronto.</p>
+        </section>
       </main>
     </>
   );

@@ -1,0 +1,64 @@
+/* Portada del inicio: fondo Cosmos con un brillo suave detrás del logo.
+   La altura depende del contenido (sin 100vh). */
+
+.portada {
+  background:
+    radial-gradient(
+      ellipse 60% 55% at 50% 45%,
+      color-mix(in srgb, var(--unex-indigo) 16%, transparent),
+      transparent 70%
+    ),
+    var(--unex-cosmos);
+  color: var(--unex-polvo);
+}
+
+.portada :focus-visible {
+  outline-color: var(--unex-polvo);
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: clamp(2.5rem, 7vw, 5rem) 16px clamp(3.5rem, 9vw, 6.5rem);
+  text-align: center;
+}
+
+.logo {
+  width: min(360px, 100%);
+  margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.titulo {
+  max-width: 16em;
+  margin-bottom: 1.25rem;
+}
+
+.entradilla {
+  max-width: 36rem;
+  margin-bottom: 2rem;
+  color: color-mix(in srgb, var(--unex-polvo) 85%, transparent);
+  font-size: 1.1875rem; /* 19 px */
+  font-weight: 300;
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 999px;
+  background: var(--unex-polvo);
+  color: var(--unex-cosmos);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.15s, transform 0.15s;
+}
+
+.boton:hover {
+  background: color-mix(in srgb, var(--unex-polvo) 82%, var(--unex-plasma-claro));
+  transform: translateY(-1px);
+}

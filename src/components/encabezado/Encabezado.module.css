@@ -162,6 +162,22 @@
   margin-left: auto;
 }
 
+/* Pantallas muy estrechas: logo al mínimo del manual y menú más compacto. */
+@media (max-width: 399px) {
+  .barra {
+    gap: 0.75rem;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+
+  .menu summary {
+    gap: 0.5rem;
+    padding-inline: 0.875rem;
+  }
+}
+
 @media (min-width: 1040px) {
   .lista {
     display: flex;
