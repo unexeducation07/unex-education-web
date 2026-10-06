@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lexend, Unbounded } from "next/font/google";
 import "../../docs/marca/tokens.css";
 import "./globals.css";
+import PiePagina from "@/components/PiePagina";
 
 // Títulos: Unbounded con los tres pesos del manual.
 const unbounded = Unbounded({
@@ -29,7 +30,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es" className={`${unbounded.variable} ${lexend.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <PiePagina />
+      </body>
     </html>
   );
 }

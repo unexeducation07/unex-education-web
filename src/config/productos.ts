@@ -1,0 +1,93 @@
+// Productos de UNEX Education: el ÚNICO lugar donde se definen sus nombres y direcciones.
+//
+// Cuando un producto tenga dirección, cambia su `url` de null a la dirección completa
+// (por ejemplo "https://unex-academy.vercel.app"). Mientras sea null, el sitio lo muestra
+// como "Próximamente" y no enlaza a ningún lado.
+//
+// Al copiar este archivo a otro proyecto (Academy, Gestión o Evaluación), cambia las URL
+// relativas ("/" y "/apps") por las completas del sitio principal.
+
+export type UniversoId = "academy" | "gestion" | "evaluacion" | "apps";
+
+export interface Producto {
+  id: UniversoId;
+  /** Nombre completo, por ejemplo "UNEX Academy". */
+  nombre: string;
+  /** Nombre corto para menús, por ejemplo "Academy". */
+  nombreCorto: string;
+  /** Público al que va dirigido. */
+  para: string;
+  /** Una frase que explica el producto. */
+  frase: string;
+  /** Dirección del producto, o null si aún no existe. */
+  url: string | null;
+  /** Colores del universo (tokens de docs/marca/tokens.css). */
+  colores: {
+    /** Solo para elementos gráficos: puntos, franjas, íconos. */
+    base: string;
+    /** Texto y botones sobre fondo claro. */
+    oscuro: string;
+    /** Texto sobre fondo Cosmos. */
+    claro: string;
+  };
+}
+
+export const sitioPrincipal = {
+  nombre: "UNEX Education",
+  url: "/",
+};
+
+export const productos: Producto[] = [
+  {
+    id: "academy",
+    nombre: "UNEX Academy",
+    nombreCorto: "Academy",
+    para: "Estudiantes",
+    frase: "Cursos cortos en los que cada tema es un universo por explorar.",
+    url: null,
+    colores: {
+      base: "var(--unex-aurora)",
+      oscuro: "var(--unex-aurora-oscuro)",
+      claro: "var(--unex-aurora)",
+    },
+  },
+  {
+    id: "gestion",
+    nombre: "UNEX Gestión",
+    nombreCorto: "Gestión",
+    para: "Rectores y coordinación",
+    frase: "Matrículas, notas, asistencia y reportes de tu colegio en un solo lugar.",
+    url: null,
+    colores: {
+      base: "var(--unex-indigo)",
+      oscuro: "var(--unex-indigo-oscuro)",
+      claro: "var(--unex-indigo-claro)",
+    },
+  },
+  {
+    id: "evaluacion",
+    nombre: "UNEX Evaluación",
+    nombreCorto: "Evaluación",
+    para: "Docentes e instituciones",
+    frase: "Crea exámenes y conoce los resultados al instante.",
+    url: null,
+    colores: {
+      base: "var(--unex-nebulosa)",
+      oscuro: "var(--unex-nebulosa-oscuro)",
+      claro: "var(--unex-nebulosa-clara)",
+    },
+  },
+  {
+    id: "apps",
+    nombre: "UNEX Apps",
+    nombreCorto: "Apps",
+    para: "Toda la comunidad",
+    frase: "Pequeñas herramientas listas para usar en clase y en casa.",
+    url: "/apps",
+    colores: {
+      base: "var(--unex-plasma)",
+      oscuro: "var(--unex-plasma-oscuro)",
+      claro: "var(--unex-plasma-claro)",
+    },
+  },
+];

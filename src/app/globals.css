@@ -49,6 +49,14 @@ body {
   font-size: 1.0625rem; /* 17 px */
   font-weight: 350;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+/* Empuja el pie de página al final en páginas cortas. */
+main {
+  flex: 1 0 auto;
 }
 
 /* Escala tipográfica del manual (§6), adaptada a pantallas pequeñas. */
@@ -94,6 +102,17 @@ a {
 :focus-visible {
   outline: 3px solid var(--ink);
   outline-offset: 3px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.seccion {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
 }
 
 .visualmente-oculto {

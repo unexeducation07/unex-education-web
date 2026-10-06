@@ -1,0 +1,72 @@
+/* Pie de página: sobre Cosmos, igual que el encabezado. */
+
+.pie {
+  background: var(--unex-cosmos);
+  color: var(--unex-polvo);
+}
+
+.pie :focus-visible {
+  outline-color: var(--unex-polvo);
+}
+
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem 3rem;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 3rem 16px 2rem;
+}
+
+.marca p {
+  margin: 0.75rem 0 0;
+  color: color-mix(in srgb, var(--unex-polvo) 80%, transparent);
+  font-weight: 300;
+}
+
+.logo {
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.logo img {
+  width: 168px;
+}
+
+.titulo {
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lista {
+  display: grid;
+  gap: 0.375rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lista a {
+  color: var(--unex-polvo);
+}
+
+.inactivo {
+  color: color-mix(in srgb, var(--unex-polvo) 72%, transparent);
+}
+
+.pronto {
+  font-size: 0.875rem;
+}
+
+.legal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 16px 2rem;
+  border-top: 1px solid color-mix(in srgb, var(--unex-polvo) 15%, transparent);
+  color: color-mix(in srgb, var(--unex-polvo) 72%, transparent);
+  font-size: 0.875rem;
+}
