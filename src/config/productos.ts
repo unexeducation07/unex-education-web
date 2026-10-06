@@ -7,10 +7,10 @@
 // Al copiar este archivo a otro proyecto (Academy, Gestión o Evaluación), cambia las URL
 // relativas ("/" y "/apps") por las completas del sitio principal.
 
-export type UniversoId = "academy" | "gestion" | "evaluacion" | "apps";
+export type PlataformaId = "academy" | "gestion" | "evaluacion" | "apps";
 
 export interface Producto {
-  id: UniversoId;
+  id: PlataformaId;
   /** Nombre completo, por ejemplo "UNEX Academy". */
   nombre: string;
   /** Nombre corto para menús, por ejemplo "Academy". */
@@ -21,7 +21,7 @@ export interface Producto {
   frase: string;
   /** Dirección del producto, o null si aún no existe. */
   url: string | null;
-  /** Colores del universo (tokens de docs/marca/tokens.css). */
+  /** Colores de la plataforma (tokens de docs/marca/tokens.css). */
   colores: {
     /** Solo para elementos gráficos: puntos, franjas, íconos. */
     base: string;
@@ -43,7 +43,7 @@ export const productos: Producto[] = [
     nombre: "UNEX Academy",
     nombreCorto: "Academy",
     para: "Estudiantes",
-    frase: "Cursos cortos en los que cada tema es un universo por explorar.",
+    frase: "Cursos cortos que se viven como una historia: cada tema es un universo con misiones y logros.",
     url: null,
     colores: {
       base: "var(--unex-aurora)",
@@ -55,7 +55,7 @@ export const productos: Producto[] = [
     id: "gestion",
     nombre: "UNEX Gestión",
     nombreCorto: "Gestión",
-    para: "Rectores y coordinación",
+    para: "Rectores y coordinadores",
     frase: "Matrículas, notas, asistencia y reportes de tu colegio en un solo lugar.",
     url: null,
     colores: {

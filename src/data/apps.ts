@@ -16,7 +16,9 @@ export interface App {
   url: string;
   /** Para quién es. "todos" aparece en cualquier filtro. */
   para: Publico;
-  /** Un emoji que la represente. */
+  /** Un emoji que la represente.
+   *  NOTA: los emojis valen solo mientras haya ejemplos. Antes del lanzamiento se cambiarán
+   *  por íconos de línea acordes a la marca (la iconografía propia está pendiente en el manual). */
   icono: string;
   /** "proximamente": se muestra pero no se puede abrir. */
   estado: EstadoApp;

@@ -1,5 +1,5 @@
-/* Tarjeta de un universo. Los colores llegan como variables desde productos.ts:
-   --universo (gráficos), --universo-oscuro (botón) y --universo-texto (texto). */
+/* Tarjeta de una plataforma. Los colores llegan como variables desde productos.ts:
+   --plataforma (gráficos), --plataforma-oscuro (botón) y --plataforma-texto (texto). */
 
 .tarjeta {
   position: relative;
@@ -13,17 +13,17 @@
   transition: border-color 0.2s, transform 0.2s;
 }
 
-/* Franja superior con el color base del universo. */
+/* Franja superior con el color base de la plataforma. */
 .tarjeta::before {
   content: "";
   position: absolute;
   inset: 0 0 auto;
   height: 6px;
-  background: var(--universo);
+  background: var(--plataforma);
 }
 
 .tarjeta:hover {
-  border-color: var(--universo);
+  border-color: var(--plataforma);
   transform: translateY(-2px);
 }
 
@@ -37,7 +37,7 @@
 
 .para {
   margin-bottom: 0.5rem;
-  color: var(--universo-texto);
+  color: var(--plataforma-texto);
   font-weight: 500;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .boton {
-  background: var(--universo-oscuro);
+  background: var(--plataforma-oscuro);
   color: var(--unex-polvo);
   text-decoration: none;
 }

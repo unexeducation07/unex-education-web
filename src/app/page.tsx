@@ -1,7 +1,7 @@
 import Encabezado from "@/components/encabezado/Encabezado";
 import ComoSeAprende from "@/components/inicio/ComoSeAprende";
 import Portada from "@/components/inicio/Portada";
-import Universos from "@/components/inicio/Universos";
+import Plataformas from "@/components/inicio/Plataformas";
 
 export default function Inicio() {
   return (
@@ -9,7 +9,7 @@ export default function Inicio() {
       <Encabezado />
       <main id="contenido">
         <Portada />
-        <Universos />
+        <Plataformas />
         <ComoSeAprende />
       </main>
     </>

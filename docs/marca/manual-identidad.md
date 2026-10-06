@@ -75,7 +75,9 @@ Todo el logo es geometría exacta. No depende de ninguna fuente instalada.
 
 ---
 
-## 4. Submarcas: Universos UNEX
+## 4. Submarcas: las plataformas UNEX
+
+**Vocabulario:** la palabra *universo* se reserva para los mundos temáticos de los cursos de Academy (aventura, magia, portales, mazmorras, videojuegos, futuro). Academy, Gestión, Evaluación y Apps son *plataformas*. Así nadie confunde un curso con un producto.
 
 Conservan el símbolo y el nombre. Cambian el color de los planetas y la palabra inferior.
 

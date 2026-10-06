@@ -19,9 +19,9 @@ export default function PiePagina() {
           <p>Donde los mundos del aprendizaje se cruzan.</p>
         </div>
 
-        <nav aria-labelledby="pie-universos">
-          <h2 id="pie-universos" className={styles.titulo}>
-            Universos UNEX
+        <nav aria-labelledby="pie-plataformas">
+          <h2 id="pie-plataformas" className={styles.titulo}>
+            Plataformas UNEX
           </h2>
           <ul className={styles.lista}>
             {productos.map((p) => (

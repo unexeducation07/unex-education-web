@@ -1,12 +1,12 @@
 import type { CSSProperties } from "react";
 import type { Producto } from "@/config/productos";
-import styles from "./TarjetaUniverso.module.css";
+import styles from "./TarjetaPlataforma.module.css";
 
-export default function TarjetaUniverso({ producto }: { producto: Producto }) {
+export default function TarjetaPlataforma({ producto }: { producto: Producto }) {
   const colores = {
-    "--universo": producto.colores.base,
-    "--universo-oscuro": producto.colores.oscuro,
-    "--universo-texto": `var(--${producto.id}-texto)`,
+    "--plataforma": producto.colores.base,
+    "--plataforma-oscuro": producto.colores.oscuro,
+    "--plataforma-texto": `var(--${producto.id}-texto)`,
   } as CSSProperties;
 
   return (

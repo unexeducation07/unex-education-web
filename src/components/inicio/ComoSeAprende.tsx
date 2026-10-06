@@ -39,7 +39,7 @@ export default function ComoSeAprende() {
     <section className={styles.banda} aria-labelledby="aprende-titulo">
       <div className="contenedor seccion">
         <div className={styles.intro}>
-          <h2 id="aprende-titulo">Cómo se aprende en UNEX</h2>
+          <h2 id="aprende-titulo">Cómo se aprende en UNEX Academy</h2>
           <p>
             Aprender es más fácil cuando hay una historia que seguir y un reto que superar. Por eso
             cada curso combina dos ingredientes.

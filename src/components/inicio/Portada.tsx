@@ -16,11 +16,11 @@ export default function Portada() {
           Donde los mundos del aprendizaje se cruzan.
         </h1>
         <p className={styles.entradilla}>
-          En UNEX cada curso es un universo con su propia historia: aventura, magia, portales,
-          mazmorras, videojuegos y futuro. Aprendes jugando y avanzas a tu ritmo.
+          UNEX reúne en un solo lugar lo que vive una comunidad educativa: cursos que se aprenden
+          como una aventura, la gestión del colegio, las evaluaciones y herramientas para el aula.
         </p>
-        <a href="#universos" className={styles.boton}>
-          Explora los universos
+        <a href="#plataformas" className={styles.boton}>
+          Explora UNEX
           <span aria-hidden="true">↓</span>
         </a>
       </div>

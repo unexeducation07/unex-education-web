@@ -45,7 +45,7 @@
   width: 168px; /* mínimo del manual: 160 px */
 }
 
-/* Universos */
+/* Plataformas */
 
 .lista,
 .panel {
@@ -80,8 +80,8 @@
 }
 
 .enlace[aria-current="page"] {
-  background: color-mix(in srgb, var(--universo) 22%, transparent);
-  color: var(--universo-claro);
+  background: color-mix(in srgb, var(--plataforma) 22%, transparent);
+  color: var(--plataforma-claro);
   font-weight: 500;
 }
 
@@ -95,7 +95,7 @@
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 50%;
-  background: var(--universo);
+  background: var(--plataforma);
 }
 
 .pronto {
@@ -165,7 +165,7 @@
 /* Pantallas muy estrechas: logo al mínimo del manual y menú más compacto. */
 @media (max-width: 399px) {
   .barra {
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 
   .logo img {
@@ -174,7 +174,8 @@
 
   .menu summary {
     gap: 0.5rem;
-    padding-inline: 0.875rem;
+    padding-inline: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 

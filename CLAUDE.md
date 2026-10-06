@@ -42,6 +42,8 @@ Futuro: `academy.`, `gestion.`, `evaluacion.` y `apps.unexeducation.co`.
 - Fuentes con `next/font/google`: **Unbounded** (títulos: 500, 600, 700) y **Lexend** (texto: 300, 400, 500).
 - El directorio no está vacío (tiene `CLAUDE.md` y `docs/`), así que `create-next-app` puede
   rechazarlo. Genera el proyecto en una carpeta temporal y mueve los archivos, o configúralo a mano.
+- Lee `AGENTS.md` antes de escribir código de Next.js: indica dónde está la documentación de la
+  versión instalada (`node_modules/next/dist/docs/`), que puede diferir de lo que conoces.
 
 ## Marca (obligatorio)
 Todo está en `docs/marca/`: manual completo, tokens CSS y 23 SVG del logo.

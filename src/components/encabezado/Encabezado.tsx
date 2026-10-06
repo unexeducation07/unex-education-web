@@ -1,26 +1,26 @@
-// Encabezado común de UNEX: logo y selector de universos.
+// Encabezado común de UNEX: logo y selector de plataformas.
 //
 // Para usarlo en otro proyecto (Academy, Gestión, Evaluación) copia:
 //   1. esta carpeta (src/components/encabezado/),
 //   2. src/config/productos.ts (con las URL completas del sitio principal),
 //   3. public/brand/unex-logo-horizontal-negativo.svg,
-// e indica el universo del proyecto: <Encabezado actual="academy" />.
+// e indica la plataforma del proyecto: <Encabezado actual="academy" />.
 // La página debe tener <main id="contenido"> para el enlace "Saltar al contenido".
 //
 // No usa JavaScript: en pantallas pequeñas el menú se abre con <details>.
 import type { CSSProperties } from "react";
-import { productos, sitioPrincipal, type Producto, type UniversoId } from "@/config/productos";
+import { productos, sitioPrincipal, type Producto, type PlataformaId } from "@/config/productos";
 import styles from "./Encabezado.module.css";
 
 interface EncabezadoProps {
-  /** Universo en el que está el usuario. Se omite en el sitio principal. */
-  actual?: UniversoId;
+  /** Plataforma en la que está el usuario. Se omite en el sitio principal. */
+  actual?: PlataformaId;
 }
 
-function Universo({ producto, actual }: { producto: Producto; actual?: UniversoId }) {
+function Plataforma({ producto, actual }: { producto: Producto; actual?: PlataformaId }) {
   const colores = {
-    "--universo": producto.colores.base,
-    "--universo-claro": producto.colores.claro,
+    "--plataforma": producto.colores.base,
+    "--plataforma-claro": producto.colores.claro,
   } as CSSProperties;
 
   const nombre = (
@@ -55,7 +55,7 @@ function Universo({ producto, actual }: { producto: Producto; actual?: UniversoI
 }
 
 export default function Encabezado({ actual }: EncabezadoProps) {
-  const universos = productos.map((p) => <Universo key={p.id} producto={p} actual={actual} />);
+  const plataformas = productos.map((p) => <Plataforma key={p.id} producto={p} actual={actual} />);
 
   return (
     <header className={styles.encabezado}>
@@ -71,11 +71,11 @@ export default function Encabezado({ actual }: EncabezadoProps) {
             height={54}
           />
         </a>
-        <nav aria-label="Universos UNEX">
-          <ul className={styles.lista}>{universos}</ul>
+        <nav aria-label="Plataformas UNEX">
+          <ul className={styles.lista}>{plataformas}</ul>
           <details className={styles.menu}>
-            <summary>Universos</summary>
-            <ul className={styles.panel}>{universos}</ul>
+            <summary>Plataformas</summary>
+            <ul className={styles.panel}>{plataformas}</ul>
           </details>
         </nav>
       </div>
